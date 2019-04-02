@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>POST DETAILS</h1>
+	<h2>Title: {{instance.title}}<br/></h2>
+	<img src="{{instance.image.url}}"/><br/>
+	Content: {{instance.content|linebreaks}}<br/>
+	Created At: {{instance.timestamp}}<br/>
+	Updated At: {{instance.updated}}<br/>
+	ID: {{instance.id}}<br/>
+	<hr/>
+	<div class="fb-comments" data-href="{{request.build_absolute_uri}}" data-numposts="5"></div>
+{% endblock content %}
